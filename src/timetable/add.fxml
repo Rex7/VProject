@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.AddController">
+   <children>
+      <VBox layoutX="26.0" prefHeight="700.0" prefWidth="200.0" style="-fx-background-color: #0091EA;">
+         <children>
+            <JFXButton fx:id="room" onAction="#submitLogin" prefHeight="50.0" prefWidth="203.0" style="-fx-background-color: #0091EA;" text="Room" />
+            <JFXButton fx:id="teacher" onAction="#submitLogin" prefHeight="54.0" prefWidth="202.0" style="-fx-background-color: #80DEEA;" text="Teacher" />
+            <JFXButton fx:id="subject" onAction="#submitLogin" prefHeight="51.0" prefWidth="202.0" style="-fx-background-color: #0091EA;" text="Subject" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="secondPane" layoutX="200.0" prefHeight="700.0" prefWidth="500.0" />
+      <VBox layoutX="-6.0" layoutY="-5.0" prefHeight="707.0" prefWidth="36.0" style="-fx-background-color: #80DEEA;" />
+   </children>
+</AnchorPane>

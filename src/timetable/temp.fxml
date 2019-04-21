@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.TempController">
+   <children>
+      <VBox layoutY="89.0" prefHeight="612.0" prefWidth="200.0" style="-fx-background-color: #0091EA;">
+         <children>
+            <JFXButton fx:id="AddUser" onAction="#ButtonClicked" prefHeight="62.0" prefWidth="202.0" style="-fx-background-color: #80DEEA;" text="Add User">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/add-user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="AddData" onAction="#ButtonClicked" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #0091EA;" text="Add Data">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Academic-Rules.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Generate" onAction="#ButtonClicked" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #80DEEA;" text="Generate">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" onDragDetected="#ButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/algorithm.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Timetable" onAction="#ButtonClicked" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #0091EA;" text="Timetable">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Modify" onAction="#ButtonClicked" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #80DEEA;" text="Delete">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="logout" layoutX="10.0" layoutY="322.0" onAction="#ButtonClicked" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #0091EA;" text="Logout">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ImageView fitHeight="91.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/college1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="secondPane" layoutX="200.0" layoutY="89.0" prefHeight="626.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" />
+      <HBox layoutX="200.0" layoutY="-11.0" prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" />
+   </children>
+</AnchorPane>

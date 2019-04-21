@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.RoomController">
+   <children>
+      <JFXTextField fx:id="roomNo" layoutX="298.0" layoutY="87.0" />
+      <JFXTextField fx:id="cl" layoutX="298.0" layoutY="143.0" />
+      <JFXButton layoutX="300.0" layoutY="189.0" onAction="#submit" prefHeight="44.0" prefWidth="132.0" style="-fx-background-color: #0091EA;" text="Submit" />
+      <Label alignment="CENTER" layoutX="108.0" layoutY="134.0" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #0091EA;" text="C/L" />
+      <Label alignment="CENTER" layoutX="108.0" layoutY="65.0" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #0091EA;" text="RoomNo" />
+      <AnchorPane fx:id="secondPane" layoutY="241.0" prefHeight="159.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>
