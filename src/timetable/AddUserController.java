@@ -17,11 +17,7 @@ import javafx.scene.control.ChoiceBox;
 import timetable.doa.UserDoa;
 import timetable.model.User;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class AddUserController implements Initializable {
 
  @FXML

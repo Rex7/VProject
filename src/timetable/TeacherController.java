@@ -5,6 +5,7 @@
  */
 package timetable;
 
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,27 +14,42 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
+import timetable.doa.teacherDoa;
+import timetable.model.Teacher;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class TeacherController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+  @FXML
+  JFXTextField initials;
     @FXML
     private Pane secondPane;
+      FXMLLoader loader;
+      SubjectController controller;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     public void submit(ActionEvent evt) throws IOException{
-        Pane newLoadedPane;
-      secondPane.getChildren().clear();
-                newLoadedPane = FXMLLoader.load(getClass().getResource("subject.fxml"));
-                secondPane.getChildren().add(newLoadedPane);
+        System.out.println("initials "+initials.getText());
+        Pane newLoadedPane;     
+            newLoadedPane = FXMLLoader.load(getClass().getResource("subject.fxml"));
+            secondPane.getChildren().add(newLoadedPane);
+             loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("subject.fxml"));
+                try {
+                    loader.load();
+                       teacherDoa teach=new teacherDoa();
+           Teacher teacher =new Teacher();
+           teacher.setInit(initials.getText());
+           boolean flag=teach.save(teacher);
+                      controller = loader.getController();
+                         int i=teach.getTeacherId(teacher);
+                          System.out.println("Id of teacher is "+i);
+                controller.setId(i);
+                } catch (IOException ex) {
+                    System.out.println("Exception thrown");
+                }
+           
     }
 }

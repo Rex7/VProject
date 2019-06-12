@@ -5,6 +5,7 @@
  */
 package timetable;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,44 +17,47 @@ import timetable.doa.SubjectDoa;
 import timetable.model.Room;
 import timetable.model.Subject;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class RSubmitController implements Initializable {
     private int myId=89;
     private Room room;
 @FXML
 private JFXTextField subjectName;
+@FXML
+      private JFXButton AddSubmit;
  
-    Subject sub=new Subject();
+ static   Subject sub=new Subject();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }  
-    public void setId(Room  room){
+    public void setId(Room  myRoom){
       
-        System.out.println(" whats"+room.getRname());
-        System.out.println("room "+room.getCandl());
-        int i=new RoomDoa().getRoomId(room);
+        System.out.println(" whats"+myRoom.getRname());
+        System.out.println("room "+myRoom.getCandl());
+        int i=new RoomDoa().getRoomId(myRoom);
          System.out.println("id "+i);
          this.myId=i;
-         this.room=room;
+         this.room=myRoom;
+         System.out.println(" room name "+myRoom.getRname());
+         
     sub.setRid(i);
     sub.setRsub(subjectName.getText());
+    
+    }
+    public void submit(ActionEvent evt){
+        System.out.println("subjetc Name "+sub.getRsub());
+        System.out.println("subject "+subjectName.getText());
+        System.out.println("subject Id in submit method "+sub.getRid());
+        SubjectDoa subjectDoa=new SubjectDoa();
+        Subject my=new Subject();
+        my.setRid(sub.getRid());
+        my.setRsub(subjectName.getText());
+        subjectDoa.save(my);
+        
     }
     
-    public void submit(ActionEvent evt){
-       
   
-    SubjectDoa doa=new SubjectDoa();
-        System.out.println("subject data "+myId);
-         System.out.println("room  "+room.getRname());
-          System.out.println("room  "+room.getCandl());
-    boolean flag=doa.save(sub);
-        System.out.println("operation "+flag);
-    }
     
 }

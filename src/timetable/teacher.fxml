@@ -7,33 +7,33 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.TeacherController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.TeacherController">
    <children>
-      <GridPane alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="8.0" prefHeight="361.0" prefWidth="370.0">
+      <GridPane alignment="BOTTOM_CENTER" layoutX="7.0" layoutY="4.0" prefHeight="135.0" prefWidth="314.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.4" minHeight="10.0" prefHeight="64.99999084472657" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="71.4" minHeight="10.0" prefHeight="69.80000915527344" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" prefHeight="77.0" prefWidth="186.0" style="-fx-background-color: #0091EA;" text="Name" />
-            <Label alignment="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="77.0" prefWidth="186.0" style="-fx-background-color: #80DEEA;" text="Practical hours" GridPane.rowIndex="3" />
-            <Label alignment="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="77.0" prefWidth="186.0" style="-fx-background-color: #0091EA;" text="Lecture hours" GridPane.rowIndex="2" />
-            <Label alignment="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="77.0" prefWidth="186.0" style="-fx-background-color: #80DEEA;" text="Teacher id" GridPane.rowIndex="1" />
-            <JFXButton onAction="#submit" prefHeight="44.0" prefWidth="132.0" style="-fx-background-color: #0091EA;" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <JFXTextField GridPane.columnIndex="1" />
-            <JFXTextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <JFXTextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <JFXTextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" prefHeight="77.0" prefWidth="186.0" style="-fx-background-color: #ffffff;" text="Teacher :">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="initials" alignment="CENTER" promptText="INITIALS" GridPane.columnIndex="1" />
          </children>
       </GridPane>
-      <AnchorPane fx:id="secondPane" layoutX="14.0" layoutY="386.0" prefHeight="200.0" prefWidth="599.0" />
+      <AnchorPane fx:id="secondPane" layoutX="23.0" layoutY="92.0" prefHeight="282.0" prefWidth="599.0" />
+      <JFXButton buttonType="RAISED" layoutX="331.0" layoutY="14.0" onAction="#submit" prefHeight="44.0" prefWidth="132.0" style="-fx-background-color: #0091EA;" text="Submit">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

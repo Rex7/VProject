@@ -54,7 +54,7 @@
                         <Font name="Arial Black" size="17.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="view" layoutX="10.0" layoutY="10.0" onAction="#buttonAction" opacity="0.8" prefHeight="130.0" prefWidth="170.0" style="-fx-background-color: #0091EA;" text="Delete" textFill="WHITE" GridPane.columnIndex="2">
+                  <JFXButton fx:id="delete" layoutX="10.0" layoutY="10.0" onAction="#buttonAction" opacity="0.8" prefHeight="130.0" prefWidth="170.0" style="-fx-background-color: #0091EA;" text="Delete" textFill="WHITE" GridPane.columnIndex="2">
                      <graphic>
                         <ImageView fitHeight="62.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                            <image>

@@ -15,11 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import timetable.doa.BaseDoa;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class ModifyController implements Initializable {
 
     /**

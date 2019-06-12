@@ -5,10 +5,7 @@
  */
 package timetable;
 
-/**
- *
- * @author Regis charles
- */
+
 public class Subject {
     private String Monday,Tuesday,Wednesday,Thursday,Friday;
 

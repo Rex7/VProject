@@ -17,11 +17,7 @@ import javafx.scene.layout.Pane;
 import timetable.doa.RoomDoa;
 import timetable.model.Room;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class RoomController implements Initializable {
 
     @FXML
@@ -61,11 +57,12 @@ public class RoomController implements Initializable {
                 loader.setLocation(getClass().getResource("rSubmit.fxml"));
                 try {
                     loader.load();
+                      controller = loader.getController();
+                controller.setId(room);
                 } catch (IOException ex) {
                     System.out.println("Exception thrown");
                 }
-                controller = loader.getController();
-                controller.setId(room);
+              
             
         } else {
 

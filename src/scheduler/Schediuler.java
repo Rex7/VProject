@@ -67,10 +67,11 @@ public class Schediuler  {
             {
                 pop[0][i]=Ini[i];
             }
-        
+        System.out.println("GENETIC ALGORITHM");
         while(g<30)
         {
         k=0;
+        
         System.out.println("GENERATION NO :"+g+1);
          System.out.println("FITNESS EVALUATION :");
          System.out.println("FITNESS VALUE OF POPULATED CHROMOSOMES :");
@@ -88,7 +89,7 @@ public class Schediuler  {
             {
                 sl.add(i);
                 pop[p+1][k]=pop[p][i];//
-                System.out.println("SELECTED FOR NEXT GENERATION :"+i);
+                System.out.println("SELECTED CHROMOSOME FOR NEXT GENERATION :"+i);
                 k++;
             }
         }
@@ -97,10 +98,10 @@ public class Schediuler  {
         System.out.println("MUTATED CHROMOSOMES FITNESS EVALUATION");
         for(j=0;j<sl.size();j++)//mutation
         {
-            System.out.println("BEFORE MUTATION POINTS="+j+points[sl.get(j)]);
+            System.out.println("BEFORE MUTATION POINTS="+j+"="+points[sl.get(j)]);
             Mut[j]=M.Mutate(pop[p][sl.get(j)]);
             mpoints[j]=F.fitnessvalue(Mut[j]);
-            System.out.println("POINTS"+j+"="+mpoints[j]);
+            System.out.println("AFTER MUTATION POINTS"+j+"="+mpoints[j]);
             if(mpoints[j]<min1)//MUtated selection
             {
                 ml.add(j);
@@ -109,12 +110,12 @@ public class Schediuler  {
             }
         }
         
-        System.out.println("CROSSOVER CHROMOSOMES FITNESS EVALUATION");
+        System.out.println("CROSSOVER CHROMOSOMES FITNESS EVALUATION.....");
         for(i=0;i<sl.size();i++)//crossover
         {
          Crs[i]=Cr.Crossovers(pop[p][sl.get(i)],pop[p][sl.get((i+1)%sl.size())],D);  
             cpoints[i]=F.fitnessvalue(Crs[i]);
-            System.out.println("POINTS"+i+"="+cpoints[i]);
+            System.out.println("CROSSOVER POINTS"+i+"="+cpoints[i]);
             if(cpoints[i]<min1)//crossover selection
             {
                 cl.add(i);

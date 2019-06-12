@@ -5,6 +5,7 @@
  */
 package timetable;
 
+import scheduler.Sol;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.property.SimpleStringProperty;
@@ -40,6 +41,7 @@ public class TtController implements Initializable {
 
     int currentValue;
     Schediuler schediuler;
+    Sol S =new Sol();
     
 //    Solution S= new Solution();;
     public String ary[][][]=new String[11][24][15];
@@ -247,7 +249,8 @@ public class TtController implements Initializable {
         String[][] smu = ary[0];//schediuler.I1.arrl.get(0)[0];
         System.out.println("schediuler.I1.arrl.get(0 " + "schediuler.I1.arrl.get(0).length");
         
-        printMatrix(myTable, smu);
+        printMatrix(myTable, smu); 
+        
 
     }
 
@@ -281,6 +284,7 @@ public class TtController implements Initializable {
     public void mySubmit(ActionEvent evt) {
         schediuler = new Schediuler();
         ary=schediuler.ary;
+        Sol.pass(ary);
         System.out.println("   no selected " + currentValue);
         System.out.println("choice selec"+days.getValue());
         System.out.println(" cat"+spinnerTime.getValue());

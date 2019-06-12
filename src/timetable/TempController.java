@@ -19,11 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class TempController implements Initializable {
 
     @FXML
@@ -54,11 +50,22 @@ public class TempController implements Initializable {
                 newLoadedPane = FXMLLoader.load(getClass().getResource("add.fxml"));
                 secondPane.getChildren().add(newLoadedPane);
                 break;
-            case "timetable":
+            case "generate":
                 secondPane.getChildren().clear();
                 newLoadedPane = FXMLLoader.load(getClass().getResource("tt.fxml"));
                 secondPane.getChildren().add(newLoadedPane);
                 break;
+            case "timetable":
+                secondPane.getChildren().clear();
+                newLoadedPane = FXMLLoader.load(getClass().getResource("tt1.fxml"));
+                secondPane.getChildren().add(newLoadedPane);
+                break;
+            case "delete":
+                secondPane.getChildren().clear();
+                newLoadedPane = FXMLLoader.load(getClass().getResource("modify.fxml"));
+                secondPane.getChildren().add(newLoadedPane);
+                break;
+                
 
         }
     }
@@ -70,7 +77,6 @@ public class TempController implements Initializable {
         JFXButton button = (JFXButton) evt.getSource();
         String text = button.getText();
         System.out.println("Text " + button.getId());
-        System.out.println("  "+myData);
         switch (button.getId()) {
             case "AddUser":
                 secondPane.getChildren().clear();
@@ -87,23 +93,24 @@ public class TempController implements Initializable {
                 
                 break;
             case "Generate":
-                secondPane.getChildren().clear();
+                 secondPane.getChildren().clear();
+                newLoadedPane = FXMLLoader.load(getClass().getResource("tt.fxml"));
+                secondPane.getChildren().add(newLoadedPane);
                ;
                 break;
             case "Timetable":
                 secondPane.getChildren().clear();
-                newLoadedPane = FXMLLoader.load(getClass().getResource("tt.fxml"));
+                newLoadedPane = FXMLLoader.load(getClass().getResource("tt1.fxml"));
                 secondPane.getChildren().add(newLoadedPane);
                 break;
             case "ViewData":
                 secondPane.getChildren().clear();
 
                 break;
-            case "Modify":
+            case "delete":
                 secondPane.getChildren().clear();
-                   newLoadedPane = FXMLLoader.load(getClass().getResource("Modify.fxml"));
+                    newLoadedPane = FXMLLoader.load(getClass().getResource("Modify.fxml"));
                 secondPane.getChildren().add(newLoadedPane);
-                
                 break;
             case "logout":
                 Parent parent = FXMLLoader.load(getClass().getResource("Admin.fxml"));

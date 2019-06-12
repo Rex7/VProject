@@ -20,11 +20,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import timetable.doa.UserDoa;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class AdminController implements Initializable {
 
  @FXML

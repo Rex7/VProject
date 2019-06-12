@@ -19,11 +19,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
 public class AddController implements Initializable {
 
     /**
@@ -53,7 +48,7 @@ public class AddController implements Initializable {
            break;
        case"subject":
              secondPane.getChildren().clear();
-                newLoadedPane = FXMLLoader.load(getClass().getResource("subject.fxml"));
+                newLoadedPane = FXMLLoader.load(getClass().getResource("subject1.fxml"));
                 secondPane.getChildren().add(newLoadedPane);
            break;
        case "department":

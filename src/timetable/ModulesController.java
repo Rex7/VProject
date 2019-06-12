@@ -17,11 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Regis charles
- */
+
 public class ModulesController implements Initializable {
 
     /**
@@ -105,7 +101,7 @@ public class ModulesController implements Initializable {
                     System.out.println("Exception thrown");
                 }
                 controller = loader.getController();
-                controller.setText("timetable");
+                controller.setText("generate");
                 parent = loader.getRoot();
                 second = new Scene(parent);
                 app_Start = (Stage) ((Node) evt.getSource()).getScene().getWindow();
@@ -113,7 +109,7 @@ public class ModulesController implements Initializable {
                 app_Start.show();
                 break;
 
-            case "view":
+            case "delete":
 
                 loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("temp.fxml"));
@@ -123,7 +119,7 @@ public class ModulesController implements Initializable {
                     System.out.println("Exception thrown");
                 }
                 controller = loader.getController();
-                controller.setText("View");
+                controller.setText("delete");
                 parent = loader.getRoot();
                 second = new Scene(parent);
                 app_Start = (Stage) ((Node) evt.getSource()).getScene().getWindow();

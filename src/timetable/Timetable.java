@@ -12,15 +12,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import scheduler.Schediuler;
 
-/**
- *
- * @author Regis charles
- */
+
 public class Timetable extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("modules.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
         
         Scene scene = new Scene(root);
         
